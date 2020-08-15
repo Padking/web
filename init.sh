@@ -1,4 +1,4 @@
-sudo ln -sf /home/box/etc/hello.py /etc/gunicorn.d/hello.py
+sudo ln -sf /home/box/web/hello.py /etc/gunicorn.d/hello.py
 sudo /etc/init.d/gunicorn restart
 
 # Проверка правильности выполнения п.3 задания
