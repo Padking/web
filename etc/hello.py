@@ -1,5 +1,5 @@
 # gunicorn configuration file
 
-# pythonpath = '/usr/bin/python3'
+pythonpath = '/home/box/web/hello.py'
 bind = "0.0.0.0:8080"
 workers = 4
