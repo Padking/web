@@ -26,4 +26,5 @@ Py-функции .app
 2. cd ~/web/
 3. chmod +x init.sh
 4. ./init.sh
-5. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app & curl 'http://127.0.0.1/hello/?a=1&a=2&b=3'
+5. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app & curl 'http://127.0.0.1/hello/?a=1&a=2&b=3'  # формируется ошибка 502, что не мешает сдаче задания
+6. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app & curl 'http://127.0.0.1:8080/?a=1&a=2&b=3'  # ошибка НЕ формируется
