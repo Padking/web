@@ -1,6 +1,6 @@
-sudo rm -rf /etc/nginx/sites-enabled/default
-sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/nginx_1_8_12.conf
-sudo /etc/init.d/nginx restart
+sudo ln -s /home/box/etc/hello.py /etc/gunicorn.d/hello.py
+sudo /etc/init.d/gunicorn restart
 
-# Проверка правильности выполнения задания
-curl http://localhost/uploads/proba.txt
+# Проверка правильности выполнения п.3 задания
+gunicorn hello:app
+curl http://localhost/?a=1&a=2&b=3
