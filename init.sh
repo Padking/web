@@ -1,4 +1,4 @@
-sudo ln -sf /home/box/etc/hello.py /etc/gunicorn.d/hello.conf.py
+sudo ln -s /home/box/etc/hello.py /etc/gunicorn.d/hello.py
 sudo /etc/init.d/gunicorn restart
 
 
@@ -23,4 +23,4 @@ sudo /etc/init.d/gunicorn restart
 
 
 # git clone https://github.com/Padking/web.git
-# gunicorn -w 2 -b 0.0.0.0:8080 hello:app & curl -vv 'http://127.0.0.1/hello/?a=1&a=2&b=3'
+# gunicorn -w 2 -b 0.0.0.0:8080 hello:app & curl 'http://127.0.0.1:8080/?a=1&a=2&b=3'
