@@ -3,4 +3,4 @@ sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/nginx_1_8_12.
 sudo /etc/init.d/nginx restart
 
 # Проверка правильности выполнения задания
-curl http://localhost/uploads/proba.txt  # выполнить в оболочке терминала степик
+curl http://localhost/uploads/proba.txt
