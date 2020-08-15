@@ -1,8 +1,8 @@
-sudo ln -s /home/box/etc/hello.py /etc/gunicorn.d/hello.py
+sudo ln -s /home/box/etc/hello.py /etc/gunicorn.d/hello
 sudo /etc/init.d/gunicorn restart
 
 # Проверка правильности выполнения п.3 задания
-gunicorn -c /etc/gunicorn.d/hello.py hello:app
+gunicorn -c /etc/gunicorn.d/hello hello:app
 curl http://localhost:8080/?a=1&a=2&b=3
 # Завершена с ошибкой:
 """
