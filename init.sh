@@ -1,9 +1,11 @@
-sudo ln -sf /home/box/web/hello.py /etc/gunicorn.d/hello.py
+sudo ln -sf /home/box/etc/hello.py /etc/gunicorn.d/hello.py
 sudo /etc/init.d/gunicorn restart
 
 # Проверка правильности выполнения п.3 задания
 # gunicorn -c /etc/gunicorn.d/hello hello:app
-curl http://localhost:8080/?a=1&a=2&b=3
+# gunicorn -w 2 -b 0.0.0.0:8080 hello:app
+# curl http://localhost:8080/?a=1&a=2&b=3
+curl -vv 127.0.0.1:8080/?a=1&a=2&b=3
 # Завершена с ошибкой:
 # Starting Gunicorn workers                                                    
 # Traceback (most recent call last):                                              
