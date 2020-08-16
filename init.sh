@@ -1,9 +1,11 @@
-sudo rm -rf /etc/nginx/sites-enabled/default
-# sudo rm -rf /etc/gunicorn.d/django.example
-# sudo rm -rf /etc/gunicorn.d/wsgi.example
+sudo pip3 install virtualenv
+sudo pip3 install pathlib2
+virtualenv -p python3 venv
+source venv/bin/activate
+pip3 install django
 
-sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/nginx_1_9_11.conf
-# sudo ln -sf /home/box/web/etc/hello.conf /etc/gunicorn.d/hello
+sudo rm -rf /etc/nginx/sites-enabled/default
+
+sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/nginx_2_1_11.conf
 
 sudo /etc/init.d/nginx restart
-# sudo /etc/init.d/gunicorn restart
