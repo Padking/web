@@ -28,3 +28,17 @@ Py-функции .app
 4. ./init.sh
 5. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app & curl 'http://127.0.0.1/hello/?a=1&a=2&b=3'  # формируется ошибка 502, что не мешает сдаче задания
 6. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app & curl 'http://127.0.0.1:8080/?a=1&a=2&b=3'  # ошибка НЕ формируется
+
+
+=========================================
+Для выполнения задания 2.1.11 необходимо:
+=========================================
+1. как 1. (см. выше)
+2. cd ~/web/
+3. chmod +x init.sh
+4. ./init.sh
+5. source venv/bin/activate  # не обязательно!
+6. gunicorn -w 2 -c /home/box/web/etc/hello.py hello:app
+7. gunicorn -w 2 -c /home/box/web/etc/qa.py ask.wsgi:application
+8. curl -vv 'http://127.0.0.1:8000/login/'  # 200
+9. curl -vv 'http://127.0.0.1:8000/lo/'  # 404
