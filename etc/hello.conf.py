@@ -4,9 +4,10 @@ CONFIG = {
   'python': '/usr/bin/python3',
   'args': (
     '--bind=0.0.0.0:8080',
-    '--workers=2',
+    '--workers=4',
     '--timeout=15',
-    '--log-level=debug',
+     '--daemon',
+    # '--log-level=debug',
     'hello:app'
   )
 }
