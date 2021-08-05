@@ -1,0 +1,14 @@
+git clone https://github.com/Padking/web.git
+bash init.sh
+
+# Проверить правильность отдачи статики nginx'ом
+curl http://localhost:80/uploads/proba.txt
+
+# К 1.9.11
+curl -vv "http://127.0.0.1:8080/?a=1" - запрос отправляется напрямую к gunicorn
+curl -vv "http://127.0.0.1/hello/?a=1" - проверяем работает и проксирует ли nginx
+
+Создать профиль git на ВМ
+Упростить удаление папок на ВМ
+Выполнить push с ВМ
+Конфликт версий gunicorn?
