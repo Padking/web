@@ -1,8 +1,7 @@
-sudo pip3 install virtualenv
 sudo pip3 install pathlib2
 virtualenv -p python3 venv
 source venv/bin/activate
-pip3 install django
+pip3 install django==2.0
 
 sudo rm -rf /etc/nginx/sites-enabled/default
 
